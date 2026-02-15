@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact School Library">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Library / Contact</title>
+
+    <!--==styling section==-->
+    <style>
+        body {
+            font-family: 'tahoma', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+        }
+
+        header,
+        footer {
+            background-color: orange;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: larger;
+            font-style: italic;
+        }
+
+        form {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+
+        .inline {
+            width: auto;
+        }
+
+        button {
+            margin-top: 15px;
+            background-color: greenyellow;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="color: blue;">Contact the Library</h1>
+        <nav>
+            <a href="about.html" style="color: blue;"><b>Home</b></a>
+            <a href="about.html" style="color: blue;"><b>About</b></a>
+            <a href="contact.html" style="color: blue;"><b>contact</b></a>
+        </nav>
+    </header>
+
+    <!--==form section==-->
+    <form method="post" autocomplete="on">
+        <h2>Student Information</h2>
+
+        <label for="name"><b>Full Name:</b></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required maxlength="50">
+
+        <label for="admno"><b>Admission Number:</b></label>
+        <input type="text" id="admno" name="admo" pattern="[A-Za-z0-9]+" placeholder="e.g. SCH1234" required>
+
+        <label for="email"><b>Email Address:</b></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone"><b>phone Number:</b></label>
+        <input type="tel" id="phone" name="phone" placeholder="10 digit number" pattern="[0-9]{10}">
+
+        <label for="gender"><b>gender</b></label>
+        <input type="radio" name="gender" value="male" class="inline"> Male
+        <input type="radio" name="gender" value="female" class="inline"> Female
+        <input type="radio" name="gender" value="other" class="inline"> Other
+
+        <label><b>Library Services Interested In</b></label>
+        <input type="checkbox" name="Service[]" value="Borrow books" class="inline"> Borrow books
+        <input type="checkbox" name="Service[]" value="Reading room" class="inline"> Reading room
+        <input type="checkbox" name="Service[]" value="Digital resources" class="inline"> Digital resources
+
+        <label><b>Hobbies</b></label>
+        <input type="checkbox" name="Hobbies" value="football" class="inline">football
+        <input type="checkbox" name="Hobbies" value="cooking" class="inline">cooking
+
+        <!--==class section==-->
+        <label for="class"><b>class:</b></label>
+        <select id="class" name="class" required>
+            <option value="">--Select your class--</option>
+            <option value="form1">Form 1</option>
+            <option value="form2">Form 2</option>
+            <option value="form3">Form 3</option>
+            <option value="form4">Form 4</option>
+        </select>
+
+        <!--==message section==-->
+        <label for="message"><b>Message / Query:</b></label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+    </form>
+
+    <footer>
+        <p>Contact us for any library-related queries</p>
+    </footer>
+</body>
+
+</html>
